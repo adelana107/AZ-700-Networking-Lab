@@ -2,7 +2,7 @@
 
 ## Lab: Unit 8 - Connect Two Azure Virtual Networks using Global Virtual Network Peering
 
-**Date Completed:** [Today's Date]
+**Date Completed:** 13-06-2026
 
 **Status:** ✅ Complete
 
