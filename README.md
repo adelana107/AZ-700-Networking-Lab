@@ -1,34 +1,21 @@
-# AZ-700 Lab: Virtual Network Peering
+# My AZ-700 Lab Completion Log
 
-## Lab Completed: [Today's Date]
+## Lab: Unit 8 - Connect Two Azure Virtual Networks using Global Virtual Network Peering
 
-### Resources Created
+**Date Completed:** 13-06-2026
 
-| Resource | Name | Details |
-|----------|------|---------|
-| Resource Group | ContosoResourceGroup | West Europe |
-| Virtual Network 1 | CoreServicesVnet | 10.20.0.0/16 |
-| Virtual Network 2 | ManufacturingVnet | 10.30.0.0/16 |
-| VM 1 | TestVM1 | 10.20.20.4 |
-| VM 2 | ManufacturingVM | 10.30.1.4 |
+**Status:** ✅ Complete
 
-### Peering Configuration
+**Issues Encountered & Solutions:**
 
-| Peering Name | Status |
-|--------------|--------|
-| CoreServicesVnet-to-ManufacturingVnet | Connected |
-| ManufacturingVnet-to-CoreServicesVnet | Connected |
+| Issue | Solution |
+|-------|----------|
+| Location 'East Europe' not available for VMs | Changed deployment location to West Europe |
+| Standard_DS1_v2 SKU not available | Used Standard_D2s_v3 instead |
+| Basic SKU public IP limit | Changed to Standard SKU with Static allocation |
+| Peering only one direction | Created peerings in both directions |
+| Ping fails after peering | Used RDP port test instead (Windows Firewall blocks ICMP) |
 
-### Test Results
-
-| Test | Result |
-|------|--------|
-| Pre-peering connectivity | ❌ Failed (expected) |
-| Post-peering connectivity | ✅ Succeeded |
-
-### Key Takeaways
-
-- Virtual network peering connects VNets through Microsoft backbone
-- Peering must be bidirectional
-- After peering, resources can communicate across VNets
-- ICMP (ping) may be blocked by Windows Firewall but TCP/RDP works
+**Test Results:**
+- Pre-peering: ❌ TcpTestSucceeded: False
+- Post-peering: ✅ TcpTestSucceeded: True
