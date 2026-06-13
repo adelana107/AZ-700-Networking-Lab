@@ -1,6 +1,6 @@
 # AZ-700 Lab: Virtual Network Peering
 
-## Lab Completed: [Today's Date]
+## Lab Completed: 13-06-2026
 
 ### Resources Created
 
